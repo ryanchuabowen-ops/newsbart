@@ -9,7 +9,8 @@ Then, the executive summary, a dataframe of all articles (df_all) and the aforem
 
 
 The Website side:
-The index/homepage displays the results of processing using AI/ML. NOTE: the article's "title" (which is actually the BART summary as mentioned) is displayed under Summary in the HTML and the "summary" (which is actually the Original article) is displayed under Original Article.
+
+->The index/homepage displays the results of processing using AI/ML. NOTE: the article's "title" (which is actually the BART summary as mentioned) is displayed under Summary in the HTML and the "summary" (which is actually the Original article) is displayed under Original Article.
 
 ->The /gpt_qna and /predict pages allow access to Gemma 3-27b and the previously scraped articles inside df_all. First, the keyword inserted inside "Ingest" textbox is used to find all articles (within df_all) with the keyword, the articles and the question inserted in prompted question are both fed into Gemma 3-27b model. The creativity is adjustable. All of this is done with prompt engineering and occurs within the prompt. The model will be prompted with the articles and question, once with a prompt suggesting the model should give a concise summary and once with a prompt suggesting the model should reply with a longer executive summary. The responses are displayed.
 
