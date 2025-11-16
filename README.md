@@ -21,4 +21,6 @@ Usually the process of converting a news website (if newspaper4k could infact do
 
 Usually the process of scraping news articles' descriptions and summarising them takes: 48 - 66 seconds. With charts, it takes around 120 seconds. With charts and description: takes 240 seconds. Expectedly, the higher amount for sample size and scraped articles, the longer it takes.
 
+You will need ngrok token in the last few lines of code
+
 
