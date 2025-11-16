@@ -2016,34 +2016,3 @@ print(f"Flask app exposed at: {public_url}")
 
 # Run your Flask application
 app.run(port=5000)
-
-article = newspaper.article('https://www.cnbc.com/2025/11/12/india-october-inflation-matches-rbi-outlook-easing-hopes-for-rate-cuts.html')
-prompt = article.text
-src = wb.get_sources()[['name','lastupdated']].drop(index = '85') #source 85 is too long to calculate using len() or any other methods
-src['number of indicators'] = [194, 1516, 36, 5, 574, 1745, 8450, 115, 1277, 36, 474, 29, 132, 564, 1800, 256, 166, 1, 3313, 3588, 98, 21, 108, 131, 678, 11, 211, 3, 420, 189, 185, 36, 274, 408, 2, 28, 2778, 13, 146, 2, 4, 47, 27, 302, 315, 19, 104, 129, 347, 2, 47, 19, 71, 1, 1, 47, 21, 16, 574, 111, 72, 473, 746, 432, 43, 71, 47, 43, 1577, 43]
-
-choice = ai.generate_text(f" Data: [{prompt}]. Options: [{src}]. Read but do not print these instructions in output: Read the data and choose the most relevant option from the given options. Print only id number, no chit-chat. Filter out everything that is not a number. DO NOT add in hallucinated noise. Maximum 5 choices, only choose frequently updated sources that contains less than 170 indicators, very strongly advised to consider sources within this list first(for regularity and time taken): [83,67,3,15,27,54,59,66,67,68,70,75,79]. Leave 4 nextlines after response. DO NOT label using numbers, instead use *", model_name='google/gemma-3-27b')
-print(choice)
-#ctry = wbdata.get_countries()######## fix pls
-
-"""## Explanation for why we can't select all sources"""
-
-src = wb.get_sources()[['name','lastupdated']].drop(index = '85')
-src['amt'] = [194, 1516, 36, 5, 574, 1745, 8450, 115, 1277, 36, 474, 29, 132, 564, 1800, 256, 166, 1, 3313, 3588, 98, 21, 108, 131, 678, 11, 211, 3, 420, 189, 185, 36, 274, 408, 2, 28, 2778, 13, 146, 2, 4, 47, 27, 302, 315, 19, 104, 129, 347, 2, 47, 19, 71, 1, 1, 47, 21, 16, 574, 111, 72, 473, 746, 432, 43, 71, 47, 43, 1577, 43]
-
-#selected sources that are frequently updated and small enough for fast llm reading speed
-temp = wb.get_sources()
-wb.get_sources().loc[['83','67','3','15','27','54','59','66','67','68','70','75','79']]
-#/ask llm src selection prompt (after 'The maximum number of choice is 5,...')
-#'consider sources within this list(for regularity and time taken): [83,67,3,15,27,54,59,66,67,68,70,75,79].'
-#'ensure sources are updated frequently and contains less than 170 indicators'
-#amt of indicators for each source except 85: [194, 1516, 36, 5, 574, 1745, 8450, 115, 1277, 36, 474, 29, 132, 564, 1800, 256, 166, 1, 3313, 3588, 98, 21, 108, 131, 678, 11, 211, 3, 420, 189, 185, 36, 274, 408, 2, 28, 2778, 13, 146, 2, 4, 47, 27, 302, 315, 19, 104, 129, 347, 2, 47, 19, 71, 1, 1, 47, 21, 16, 574, 111, 72, 473, 746, 432, 43, 71, 47, 43, 1577, 43]
-
-import world_bank_data as wb
-import wbdata
-indnum = []
-for i in wb.get_sources().index:
-
-
-  print('# indicators:', len(wbdata.get_indicators(source = i)) , 'source:', i)
-  indnum.append(len(wbdata.get_indicators(source = i)))
