@@ -28,6 +28,8 @@ RUN the .py file in Google Colab only, the 3 .pkl files in files browser. You wi
 
 
 To See my website:
-misanthropic-margarito-nonexcitative.ngrok-free.dev
+https://misanthropic-margarito-nonexcitative.ngrok-free.dev
+
 OR
-news.ngrok.dev
+
+https://news.ngrok.dev
