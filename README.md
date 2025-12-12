@@ -27,7 +27,10 @@ Usually the process of scraping news articles' descriptions and summarising them
 RUN the .py file in Google Colab only, the 3 .pkl files in files browser. You will need ngrok token in the last few lines of code and also a paid colab subscription for google.colab.ai to work (requires notebook's auth with google)
 
 
+
+
 To See my website:
+
 https://misanthropic-margarito-nonexcitative.ngrok-free.dev
 
 OR
