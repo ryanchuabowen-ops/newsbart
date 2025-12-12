@@ -10,7 +10,7 @@ Then, the executive summary, a dataframe of all articles (df_all) and the aforem
 
 The Website side:
 
--> Use v2.3.1 if in colab, v2.5.1 (lean) dev if in Google Cloud's Vertex AI's Colab Enterprise.
+-> Use v2.3.1 if in colab, v2.5.1 (lean) dev if using Google Cloud's Vertex AI's Colab Enterprise (You can use Colab Enterprise's scheduler and a no GPU runtime to set up the website)
 
 ->The index/homepage displays the results of processing using AI/ML. NOTE: the article's "title" (which is actually the BART summary as mentioned) is displayed under Summary in the HTML and the "summary" (which is actually the Original article) is displayed under Original Article.
 
