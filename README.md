@@ -1,3 +1,4 @@
+# Instructions
 The AI/ML side:
 This code scrapes the rss news of the listed financial institutions (banks) and financial news sites.
 Then, sorts the text according to categories and sub-categories, summarises the news article into a shorter form (by BART).
@@ -37,7 +38,7 @@ OR
 
 https://news.ngrok.dev
 
-#Singapore Copyright Act 2021:
+# Singapore Copyright Act 2021:
 https://sso.agc.gov.sg/Act/CA2021
 
 I am not copyrighting the property (AI models) of the companies involved (facebook, google). The application of these AI models in the form of a website that summarises news articles is mine.
