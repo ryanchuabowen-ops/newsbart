@@ -930,7 +930,7 @@ def ask():
     return render_template_string(HTML_TEMPLATE5, error = "ARTICLE DOWNLOAD ERROR", textbox="")
   prompt = article.text
   #new updated replaced version instead of google.colab.ai module
-  client = genai.Client(http_options=HttpOptions(api_version="v1"),api_key='AIzaSyC4KzapdFIEcZdSYLWS7oxwcU65xKk5FD4')
+  client = genai.Client(http_options=HttpOptions(api_version="v1"),api_key=)
 
   summary = client.models.generate_content(model="gemini-2.5-flash-lite",contents=f" Summarize: [{prompt}]. Read but do not print these instructions in output: Print only executive summary (include numbers,if any) and a appropriate title, Separate the summary and title with a * , no chit-chat. Filter out all boilerplate words and noise. DO NOT add in hallucinated noise. Leave 4 nextlines after response.",)
   summary = re.sub(r'\\[a-zA-Z]+|[\${}*#]', '', str(summary.text))
@@ -1368,7 +1368,7 @@ def search():
     """
   results = DDGS().news(keywords=topic, region=region, safesearch="off", timelimit="m", max_results=int(sample), query= topic)
 
-  client = genai.Client(http_options=HttpOptions(api_version="v1"),api_key='AIzaSyC4KzapdFIEcZdSYLWS7oxwcU65xKk5FD4')
+  client = genai.Client(http_options=HttpOptions(api_version="v1"),api_key=)
 
   #tree1
   texts=[]
@@ -1659,10 +1659,10 @@ def search():
 from pyngrok import ngrok
 
 # Authenticate ngrok (you might need to get an auth token from ngrok.com)
-ngrok.set_auth_token("33MH4kFNmeyEv2Bg1m8aFIFN6UA_7KwB9RxpcLZ8adNKQGLFu")
+ngrok.set_auth_token()
 
 # Start ngrok tunnel on the port your Flask app will run on (e.g., 5000)
-public_url = ngrok.connect(addr=5000,domain="news.ngrok.dev").public_url
+public_url = ngrok.connect(addr=5000,domain=).public_url
 print(f"Flask app exposed at: {public_url}")
 
 # Run your Flask application
