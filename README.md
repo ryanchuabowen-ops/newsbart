@@ -1,10 +1,11 @@
 # Lean Website UI
 
 ## News2Barchart feature
-![View video here](https://github.com/ryanchuabowen-ops/newsbart/blob/main/Video-Project-3.3gp)
+[![Youtube video]()](https://youtu.be/ufQbKvuyBmc)
+
 
 ## Internet Gemma Feature
-![View video here](https://github.com/ryanchuabowen-ops/newsbart/blob/main/Video-Project-3.3gp)
+![Youtube video](https://youtu.be/lDzBMv3YJSE)
 
 
 # Instructions
