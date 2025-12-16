@@ -1,3 +1,12 @@
+# Lean Website UI
+
+## News2Barchart feature
+![alt text](https://github.com/ryanchuabowen-ops/newsbart/blob/main/Video-Project-2.3gp)
+
+## Internet Gemma Feature
+![alt text](https://github.com/ryanchuabowen-ops/newsbart/blob/main/Video-Project-3.3gp)
+
+
 # Instructions
 The AI/ML side:
 This code scrapes the rss news of the listed financial institutions (banks) and financial news sites.
